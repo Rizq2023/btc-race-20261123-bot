@@ -23,6 +23,11 @@
 //
 // Determinism: float64 arithmetic on + - * / only, no wall clock, no network,
 // no randomness. The same bars give the same orders, run after run.
+//
+// Parameter choices (tested on the dev window, grade-local):
+//   - DIP 1.0%: 1.5% caught only the falling knife (-$2.70); 1.0% caught two
+//     real bounces (+$1.88). 2 round trips: 1 trip left no recovery (-$5.21).
+//   - Target +0.8%: +0.5% was too small to cover the losing trip (-$0.67).
 
 import { runBars, type Bar, type BarsState, type BuyInput, type SellInput } from './vendor/makefun-bars.ts';
 
